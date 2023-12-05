@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export const getFilesFormated = async () => {
-  const url = `http://localhost:3500/files/data`;
+  const url =
+    process.env.REACT_APP_API_BASE || `http://localhost:3500/files/data`;
 
   try {
     const response = await axios.get(url, {
